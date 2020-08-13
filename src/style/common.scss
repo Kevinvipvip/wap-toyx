@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.banner {
+  width: 100%;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
