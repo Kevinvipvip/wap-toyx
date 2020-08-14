@@ -30,12 +30,12 @@ const date_format = (date, fmt = 'yyyy.MM.dd') => {
 
 const ajax = (vue, url, data, handle_code_list = []) => {
   data = data || {};
-  let token = localStorage.getItem('token');
-  if (data instanceof FormData) {
-    data.append('token', token)
-  } else {
-    data.token = token
-  }
+  // let token = localStorage.getItem('token');
+  // if (data instanceof FormData) {
+  //   data.append('token', token)
+  // } else {
+  //   data.token = token
+  // }
 
   return new Promise((resolve, reject) => {
     vue.$axios({
@@ -64,14 +64,67 @@ const ajax = (vue, url, data, handle_code_list = []) => {
           }
         }
       }
+    }).catch(() => {
+      vue.$toast('网络超时')
     })
-      .catch(() => {
-        vue.$toast('网络超时')
-      })
   })
 };
-
-
+// 处理阿里云图片路径
+const aliyun_format = (obj, aliyun_field = 'pic') => {
+  if (obj instanceof Array) {
+    if (typeof obj[0] === 'string') {
+      for (let i = 0; i < obj.length; i++) {
+        obj[i] = aliyun_empty_or(obj[i]);
+      }
+    } else {
+      for (let i = 0; i < obj.length; i++) {
+        obj[i][aliyun_field] = aliyun_empty_or(obj[i][aliyun_field]);
+      }
+    }
+  } else if (typeof obj === 'object') {
+    obj[aliyun_field] = aliyun_empty_or(obj[aliyun_field]);
+  } else {
+    return aliyun_empty_or(obj);
+  }
+};
+const aliyun_empty_or = (aliyun) => {
+  if (aliyun) {
+    if (aliyun.indexOf('https') === 0) {
+      return aliyun;
+    } else {
+      return config.aliyun + aliyun;
+    }
+  }
+};
+const format_img = (obj, img_field = 'pic') => {
+  if (obj instanceof Array) {
+    if (typeof obj[0] === 'string') {
+      for (let i = 0; i < obj.length; i++) {
+        obj[i] = empty_or(obj[i]);
+      }
+    } else {
+      for (let i = 0; i < obj.length; i++) {
+        obj[i][img_field] = empty_or(obj[i][img_field]);
+      }
+    }
+  } else if (typeof obj === 'object') {
+    obj[img_field] = empty_or(obj[img_field]);
+  } else {
+    return empty_or(obj);
+  }
+};
+const empty_or = (img) => {
+  if (img) {
+    if (img.indexOf('https') === 0) {
+      return img;
+    } else {
+      return config.url + img;
+    }
+  }
+}
 export default {
-  date_format, ajax
+  date_format,    //格式化时间
+  ajax,           //请求后台数据
+  format_img,     //补全图片路径
+  aliyun_format,  //补全阿里云图片路径
 }

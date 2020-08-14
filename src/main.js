@@ -17,8 +17,10 @@ Vue.prototype.$axios = axios;
 
 // 公共组件
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 Vue.component('Header', Header);
+Vue.component('Footer', Footer);
 
 // 设置1rem是屏幕的1/10宽
 window.onresize = setHtmlFontSize;
