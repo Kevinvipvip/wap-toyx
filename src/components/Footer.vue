@@ -23,7 +23,7 @@
     <div class="nav bottom">
       <router-link to="/" class="router">免责声明</router-link>
       <router-link to="/" class="router">版权声明</router-link>
-      <router-link to="/" class="router">网站地图</router-link>
+      <!--<router-link to="/" class="router">网站地图</router-link>-->
     </div>
   </div>
 </template>
@@ -66,6 +66,7 @@
         color: #ffffff;
         opacity: 0.8;
         position: relative;
+        box-sizing: border-box;
 
         &:after {
           content: '';

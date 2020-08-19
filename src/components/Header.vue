@@ -104,6 +104,7 @@
             font-size: 32px;
             color: #333333;
             padding: 20px 0;
+            box-sizing: border-box;
           }
         }
       }

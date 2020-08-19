@@ -7,8 +7,10 @@ import Vue from 'vue'
 
 import {
   Toast,
-  Popup
+  Popup,
+  Pagination
 } from 'vant'
 
 Vue.use(Toast)
-  .use(Popup);
+  .use(Popup)
+  .use(Pagination);

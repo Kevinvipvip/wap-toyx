@@ -1,5 +1,5 @@
 import config from './config';
-import qs from 'qs'
+import qs from 'qs';
 
 const date_format = (date, fmt = 'yyyy.MM.dd') => {
   if (date) {
@@ -121,7 +121,8 @@ const empty_or = (img) => {
       return config.url + img;
     }
   }
-}
+};
+
 export default {
   date_format,    //格式化时间
   ajax,           //请求后台数据
