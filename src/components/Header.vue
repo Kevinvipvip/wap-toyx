@@ -23,7 +23,7 @@
           <router-link to="/contact">联系我们</router-link>
         </li>
         <li @click="show_nav = true">
-          <router-link to="/">中文版/EN</router-link>
+          <a href="http://www.tjluckytoy.com/wap/en/index.html">中文版/EN</a>
         </li>
       </ul>
     </div>

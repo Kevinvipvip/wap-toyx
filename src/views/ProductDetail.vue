@@ -21,7 +21,7 @@
     <!--购买方式-->
     <div class="to-buy">
       <div class="btn-1688-buy">
-        <a href="https://tongyuanxingtoy.1688.com?spm=a2615.2177701.autotrace-shopSigns.2.134e1001sVuPec">去商城购买</a>
+        <a :href="detail.alibaba_url">去商城批发</a>
       </div>
       <div class="other-buy">
         <div class="other mp-buy" @click="show_mask = true">
@@ -48,7 +48,7 @@
     </div>
 
     <!--产品详情-->
-    <div class="detail">
+    <div class="detail" v-if="detail.detail">
       <div class="detail-title">产品详情</div>
       <div class="rich-text" v-html="detail.detail"></div>
     </div>

@@ -16,7 +16,7 @@
     </div>
     <div class="copyright">
       <p>
-        <span>备案许可证号<a href="http://www.beian.miit.gov.cn/" target="_blank">津ICP备20006105号-1</a></span>
+        <span>备案许可证号<a href="http://beian.miit.gov.cn/" target="_blank">津ICP备20006105号-1</a></span>
         <!--<span><a href="https://www.wcip.net" target="_blank">山海文化有限公司</a>提供技术支持</span>-->
       </p>
     </div>
