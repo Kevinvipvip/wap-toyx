@@ -88,14 +88,14 @@
 
     </div>
 
-    <div class="title" @click="show_sr=!show_sr">
-      <h3>社会责任</h3><i><img :src="show_sr?icon[0]:icon[1]" alt=""></i>
-    </div>
+    <!--<div class="title" @click="show_sr=!show_sr">-->
+      <!--<h3>社会责任</h3><i><img :src="show_sr?icon[0]:icon[1]" alt=""></i>-->
+    <!--</div>-->
 
-    <!--社会责任内容 social responsibility-->
-    <div class="sr-box m-30" v-show="show_sr">
-      <img :src="sr_img"/>
-    </div>
+    <!--&lt;!&ndash;社会责任内容 social responsibility&ndash;&gt;-->
+    <!--<div class="sr-box m-30" v-show="show_sr">-->
+      <!--<img :src="sr_img"/>-->
+    <!--</div>-->
 
   </div>
 </template>
@@ -117,7 +117,7 @@
         hq_img: this.config.aliyun + 'static/image-honor.jpg',// 荣誉资质在阿里云oss中的图片
         et_img1: this.config.aliyun + 'static/image-et1.jpg',// 企业团队在阿里云oss中的图片
         et_img2: this.config.aliyun + 'static/image-et2.jpg',// 企业团队在阿里云oss中的图片
-        sr_img: this.config.aliyun + 'static/image-sr-wap.jpg',// 社会责任在阿里云oss中的图片
+        // sr_img: this.config.aliyun + 'static/image-sr-wap.jpg',// 社会责任在阿里云oss中的图片
 
         dh_data: [],//发展历程数据
         cc_data: this.config.cc_data,//企业文化数据

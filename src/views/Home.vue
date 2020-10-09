@@ -40,28 +40,6 @@
           </swiper-slide>
         </swiper>
       </div>
-      <!--研发中心-->
-      <div class="home-mask m2">
-        <div class="rank right" :style="'background-image: url('+img.ice_cake_right+')'">
-          <router-link class="btn-more" :to="{path:'/contact'}">加入></router-link>
-          <div class="img-box"><img :src="img.R_D_img"/></div>
-          <div class="rank-cont">
-            <h3>研发中心</h3>
-            <p>同缘兴不断追寻新的发展之路。目前的研发中心拥有多名丰富经验的研发人员，通过新创意、新技术提升现有产品的质量、属性以及传播性。</p>
-          </div>
-        </div>
-      </div>
-      <!--孵化中心-->
-      <div class="home-mask m3">
-        <div class="rank" :style="'background-image: url('+img.ice_cake_left+')'">
-          <router-link class="btn-more" :to="{path:'/contact'}">加入></router-link>
-          <div class="img-box"><img :src="img.incubation_img"/></div>
-          <div class="rank-cont">
-            <h3>孵化中心</h3>
-            <p>为不同的元素重构，把握市场需求以及产品定位，孵化有属性有内涵的毛绒玩具，将玩具多样化、品牌化且具有传播性的事业。目前我们的孵化基地已成功产出上百种毛绒玩具并推动销售额的大幅度提升。</p>
-          </div>
-        </div>
-      </div>
       <!--定制服务-->
       <div class="home-mask m4">
         <div class="rank right" :style="'background-image: url('+img.ice_cake_right+')'">
@@ -73,6 +51,29 @@
           </div>
         </div>
       </div>
+      <!--研发中心-->
+      <div class="home-mask m2">
+        <div class="rank " :style="'background-image: url('+img.ice_cake_left+')'">
+          <router-link class="btn-more" :to="{path:'/contact'}">加入></router-link>
+          <div class="img-box"><img :src="img.R_D_img"/></div>
+          <div class="rank-cont">
+            <h3>研发中心</h3>
+            <p>同缘兴不断追寻新的发展之路。目前的研发中心拥有多名丰富经验的研发人员，通过新创意、新技术提升现有产品的质量、属性以及传播性。</p>
+          </div>
+        </div>
+      </div>
+      <!--孵化中心-->
+      <div class="home-mask m3">
+        <div class="rank right" :style="'background-image: url('+img.ice_cake_right+')'">
+          <router-link class="btn-more" :to="{path:'/contact'}">加入></router-link>
+          <div class="img-box"><img :src="img.incubation_img"/></div>
+          <div class="rank-cont">
+            <h3>孵化中心</h3>
+            <p>为不同的元素重构，把握市场需求以及产品定位，孵化有属性有内涵的毛绒玩具，将玩具多样化、品牌化且具有传播性的事业。目前我们的孵化基地已成功产出上百种毛绒玩具并推动销售额的大幅度提升。</p>
+          </div>
+        </div>
+      </div>
+
       <!--合作伙伴-->
       <div class="home-mask m5">
         <div class="rank" :style="'background-image: url('+img.ice_cake_left+')'">
@@ -141,6 +142,11 @@
         // 分类轮播图配置
         classify: {
           slidesPerView: 3,
+          autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+          },
           on: {
             tap() {
               if (this.clickedSlide) {

@@ -65,7 +65,7 @@ const ajax = (vue, url, data, handle_code_list = []) => {
         }
       }
     }).catch(() => {
-      vue.$toast('网络超时')
+      vue.$toast('network timeout')
     })
   })
 };
